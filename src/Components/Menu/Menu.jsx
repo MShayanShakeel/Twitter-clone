@@ -222,20 +222,23 @@ const Menu = () => {
                   src="https://marketplace.canva.com/EAFuJ5pCLLM/1/0/1600w/canva-black-and-gold-simple-business-man-linkedin-profile-picture-BM_NPo97JwE.jpg"
                   alt="Profile-picture"
                 />
+                 <h4 className="Profile-image-sec Profile-text">
+                  {userID?.displayName}
+                </h4>
+
                 <MdMoreHoriz
                   onClick={handleShow}
                   style={{
                     position: "absolute ",
-                    right: "0",
-                    marginRight: "-1rem",
+                    right: "5",
+                    marginLeft: "0.5rem",
+                    // marginRight:"o.5rem",
                     marginTop: "0.5rem",
-                    fontSize: "2rem",
+                    fontSize: "1.5rem",
                     cursor: "pointer",
                   }}
                 />
-                <h3 className="Profile-image-sec Profile-text">
-                  {userID?.displayName}
-                </h3>
+               
               </div>
               <div className="All-sections">
                 <ul>

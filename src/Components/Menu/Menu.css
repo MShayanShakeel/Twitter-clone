@@ -19,10 +19,12 @@
 }
 .Profile-image-sec {
   border-radius: 100px;
+  /* margin-left: -10px !important; */
 }
 .Profile-text {
   margin-top: 0.4rem;
   margin-left: 0.6rem;
+  width: 45%;
 }
 
 .All-sections {

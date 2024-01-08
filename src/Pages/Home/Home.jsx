@@ -11,8 +11,11 @@ import { v4 } from "uuid";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { imgDB, txtDB } from "../../Firebase";
 import { addDoc, collection, getDocs } from "firebase/firestore";
+import { useAuth } from "../../DataContext";
 
 const Home = () => {
+  const { userID, updateAnotherState } = useAuth();
+
   const [text, setText] = useState("");
   const [image, setImage] = useState("");
   const [data, setData] = useState([]);
@@ -126,7 +129,7 @@ const Home = () => {
                 alt="Profile-picture"
                 style={{ marginRight: "7px" }}
               />
-              <h5>M Shayan</h5>
+              <h5>{userID?.displayName}</h5>
             </div>
             <div>
               <MdMoreHoriz style={{ fontSize: "2rem" }} />
