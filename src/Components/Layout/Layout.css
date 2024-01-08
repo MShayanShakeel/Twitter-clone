@@ -1,0 +1,49 @@
+.Slidebar-section {
+  display: flex;
+  background: white;
+}
+.Slidebar {
+  height: 100vh;
+  width: 80px;
+  background-color: wheat;
+  position: fixed;
+}
+.Slidebar-toggle {
+  width: 20% !important;
+  
+}
+.slidebar-toggel-icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: right;
+}
+.slidebar-toggel-icons p svg {
+  background-color: #f29f67;
+  color: white;
+  margin-top: 30px;
+}
+
+
+/* CENTER BAR CSS  */
+.center-bar-main{
+  width: 55%;
+  margin-left: 0.46rem;
+}
+
+/* RIGHT BAR CSS */
+.Right-bar-main {
+  flex-grow: 1; 
+}
+
+.Right-bar-Second {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 19rem !important; */
+  max-width: 25%; /* Adjust the width as needed */
+  height: 100vh; /* Adjust the height as needed */
+  background-color: #fff; /* Add your desired background color */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* customize shadoooowwww */
+  z-index: 1000; /* Adjust the z-index to make sure it's above other content */
+}
