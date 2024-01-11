@@ -86,3 +86,9 @@
   border-top: 1px solid #ccc;
   font-family: Helvetica Neue;
 }
+
+.main-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

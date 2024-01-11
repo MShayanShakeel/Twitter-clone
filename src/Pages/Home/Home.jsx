@@ -141,6 +141,7 @@ const Home = () => {
                 {/* <h5>{messagingSenderId}</h5> */}
                 <h5 className="Post-deceription">{value.txtVal}</h5>
                 <img src={value.imgUrl} alt="Post" />{" "}
+                
               </div>
             ))}
           </div>

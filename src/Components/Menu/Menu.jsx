@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiSolidHome } from "react-icons/bi";
-import { FaTwitter, FaUserFriends } from "react-icons/fa";
+import { FaTwitter, FaUserFriends, FaStreetView } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { IoMdSettings } from "react-icons/io";
 import "./Menu.css";
@@ -32,38 +32,17 @@ const Menu = () => {
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
 
-  const [userAllData, setUserAllData] = useState([]);
+  
 
-  const [getData, setGetData] = useState({});
-  const [getAllData, setGetAllData] = useState({});
+  // const [getData, setGetData] = useState({});
+  // const [getAllData, setGetAllData] = useState({});
+
+  const [userAllData, setUserAllData] = useState([]);
 
   // GET ALL DATA API
 
-  // init service
-  const db = getFirestore();
+ 
 
-  // Get data
-  useEffect(() => {
-    //  collection refference
-    const colRef = collection(db, "users");
-    getDocs(colRef)
-      .then((snapshot) => {
-        let Userss = [];
-        snapshot.docs.forEach((doc) => {
-          Userss.push({ ...doc.data(), id: doc.id });
-          setUserAllData(Userss);
-          updateAnotherState(Userss);
-        });
-        console.log(Userss, "Usersss");
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  }, []);
-
-  console.log(userAllData, "outside");
-  console.log(userAllData[0]?.UserData?.email, "lolo");
-  // GET ALL DATA API END
 
   // GET SINGLE DATA API
 
@@ -101,31 +80,7 @@ const Menu = () => {
     });
   }, [userAllData, userID?.uid, fullName, userName, email, contact]);
 
-  console.log(userAllData, "outside");
-  console.log(userAllData[0]?.UserData?.email, "lolo");
-
-  // const { id } = useParams();
-  // const handleUpdate = (e) => {
-  //   e.preventDefault();
-
-  //   console.log("Before Update:", userID, fullName, userName, email, contact);
-
-  //   const examcollref = doc(db, "users", userID);
-
-  //   updateDoc(examcollref, {
-  //     fullName: fullName,
-  //     userName: userName,
-  //     email: email,
-  //     contact: contact,
-  //   })
-  //     .then((response) => {
-  //       console.log("Update Successful");
-  //       alert("updated");
-  //     })
-  //     .catch((error) => {
-  //       console.log("Update Error:", error.message);
-  //     });
-  // };
+  
 
   const [showModal, setShowModal] = useState(false);
 
@@ -137,7 +92,7 @@ const Menu = () => {
     setShowModal(false);
   };
 
-  console.log(userID?.uid, "userID");
+  console.log(userID?.fullName, "userID");
   console.log(userID?.displayName, "USERNAME");
   console.log(userID?.email, "USEREMAIL");
 
@@ -222,8 +177,8 @@ const Menu = () => {
                   src="https://marketplace.canva.com/EAFuJ5pCLLM/1/0/1600w/canva-black-and-gold-simple-business-man-linkedin-profile-picture-BM_NPo97JwE.jpg"
                   alt="Profile-picture"
                 />
-                 <h4 className="Profile-image-sec Profile-text">
-                  {userID?.displayName}
+                <h4 className="Profile-image-sec Profile-text">
+                  {userID?.fullName}
                 </h4>
 
                 <MdMoreHoriz
@@ -238,7 +193,6 @@ const Menu = () => {
                     cursor: "pointer",
                   }}
                 />
-               
               </div>
               <div className="All-sections">
                 <ul>
@@ -250,6 +204,13 @@ const Menu = () => {
                     <FaTwitter style={{ marginRight: "10px" }} />
                     Your Tweet
                   </li>
+                  <Link to="/showdata">
+                  <li className="List-item">
+                    <FaStreetView style={{ marginRight: "10px" }} />
+                    Search
+                  </li>
+                  </Link>
+                  
                   <li className="List-item">
                     <AiFillLike style={{ marginRight: "10px" }} />
                     Likes
@@ -262,22 +223,22 @@ const Menu = () => {
                     <IoMdSettings style={{ marginRight: "10px" }} />
                     Settings
                   </li>
+                  
                 </ul>
               </div>
               <div className="Post-button">
                 <button
-                  onClick={()=> handleShowModal}
                   type="button"
                   class="btn btn-primary Post-button-btn"
                 >
-                  Show User
+                  Post
                 </button>
               </div>
-              <ShowDataModal
+              {/* <ShowDataModal
                 userAllData={userAllData}
                 showModal={showModal}
                 handleClose={handleCloseModal}
-              />
+              /> */}
 
               <div className="Menu-Footer-section">
                 {" "}

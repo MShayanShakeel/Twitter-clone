@@ -18,6 +18,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [passWord, setPassWord] = useState("");
+  const [followers , setFollowers ] = useState([]);
   // const [profilePicture, setProfilePicture] = useState();
 
 
@@ -69,6 +70,7 @@ const Signup = () => {
         userName: userName,
         email: email,
         contact: contact,
+        followers : [followers],
         // profilePicture : profilePicture,
       });
       console.log(usersCollection , "usersCollection")
@@ -161,7 +163,7 @@ const Signup = () => {
                           Contact # No
                         </label>
                         <input
-                          type="text"
+                          type="tel"
                           id="form3Example4cdg"
                           className="form-control form-control-lg"
                           onChange={(e) => setContact(e.target.value)}
@@ -179,6 +181,18 @@ const Signup = () => {
                           onChange={(e) => setPassWord(e.target.value)}
                         />
                       </div>
+
+                      {/* <div className="form-outline mb-3">
+                        <label className="form-label" for="form3Example4cdg">
+                          Follow
+                        </label>
+                        <input
+                          type="radio"
+                          id="radio"
+                          className="form-control form-control-lg"
+                          onChange={setFollowers || ''}
+                        />
+                      </div> */}
 
                       <b>{errorMessage}</b>
                       <div className="d-flex justify-content-center">
