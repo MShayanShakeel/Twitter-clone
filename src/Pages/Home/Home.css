@@ -8,7 +8,7 @@
 }
 .Home-Hader-Sec {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 0.1rem ;
 }
 .Home-foryou {
@@ -136,27 +136,27 @@
 .All-post-image-text {
   margin-top: 3rem;
   position: absolute;
-  
-
-  /* background-color: #F7F9F9; */
 }
 .All-post-second {
   margin-top: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 1rem !important;
   width: 100% !important;
   display: flex;
-  justify-content: center;
-  /* border: 1px solid black; */
+  flex-direction: column; 
+  align-items: center;
   border-radius: 25px;
+  margin-bottom: 10px;
 }
-.All-post-second img{
+
+.All-post-second img {
   width: 50%;
-  margin-left: -3rem ;
+  margin-left: -3rem;
   margin-top: 1rem;
 }
-.Post-deceription{
+
+.Post-deceription {
   font-size: 1.25rem;
-  margin-left: 2rem ;
-    margin-top: -1rem;
+  margin-left: 2rem;
+  margin-top: -1rem;
 }
 

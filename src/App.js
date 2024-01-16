@@ -35,7 +35,7 @@ function App() {
                   signIn(data)
 
                 }
-                // usersData.push({ ...doc.data(), id: doc.id });
+                // usersData.push({ . ..doc.data(), id: doc.id });
               });
               // setUserAllData(usersData);
             })

@@ -70,7 +70,7 @@ const Signup = () => {
         userName: userName,
         email: email,
         contact: contact,
-        followers : [followers],
+        // followers : [followers],
         // profilePicture : profilePicture,
       });
       console.log(usersCollection , "usersCollection")

@@ -12,14 +12,13 @@
 }
 .Profile-Picture {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding-top: 1rem;
   padding-left: 1rem;
   font-family: Helvetica Neue;
 }
 .Profile-image-sec {
   border-radius: 100px;
-  /* margin-left: -10px !important; */
 }
 .Profile-text {
   margin-top: 0.4rem;
@@ -50,9 +49,12 @@
 .List-item:hover {
   background-color: #eff3f4;
   border-radius: 20px;
-
   list-style-type: none;
 }
+.List-item Link{
+  text-decoration: none;
+}
+
 
 .Post-button {
   display: flex;

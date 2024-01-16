@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiSolidHome } from "react-icons/bi";
-import { FaTwitter, FaUserFriends, FaStreetView } from "react-icons/fa";
+import { FaTwitter, FaUserFriends, FaStreetView ,FaSearch } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { IoMdSettings } from "react-icons/io";
 import "./Menu.css";
@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import ShowDataModal from "./ShowDataModal";
 
 const Menu = () => {
-  const { userID, updateAnotherState } = useAuth();
+  const { userID  } = useAuth();
 
   // SHOW UPDATE MODEL CODE STATES AND FUNCTIONS
   const [showUpdateModel, setShoUpdateModel] = useState(false);
@@ -204,12 +204,13 @@ const Menu = () => {
                     <FaTwitter style={{ marginRight: "10px" }} />
                     Your Tweet
                   </li>
-                  <Link to="/showdata">
                   <li className="List-item">
-                    <FaStreetView style={{ marginRight: "10px" }} />
+                  <Link to="/showdata" style={{ textDecoration: "none" , color: "black"
+                 }}>
+                    <FaSearch style={{ marginRight: "10px" }} />
                     Search
-                  </li>
                   </Link>
+                  </li>
                   
                   <li className="List-item">
                     <AiFillLike style={{ marginRight: "10px" }} />

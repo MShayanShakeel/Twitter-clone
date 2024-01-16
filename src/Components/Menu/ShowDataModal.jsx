@@ -19,7 +19,7 @@ const ShowDataModal = () => {
   const [userFollowingList, setUserFollowingList] = useState({});
 
 
-  
+
 
   const db = getFirestore();
 
@@ -50,14 +50,14 @@ const ShowDataModal = () => {
     try {
       if (!isFollowing) {
         const userDocRef = doc(db, "users", currentUserUid);
-        await updateDoc(userDocRef, { followers: arrayUnion(userUid) });
-        setUserFollowingList((prevState) => !prevState);
-        setUserFollowingList((prev) => ({ ...prev, [userUid]: true }));
+        await updateDoc(userDocRef, { followers: arrayUnion(userUid ,  "follow") });
+        // setUserFollowingList((prevState) => !prevState);
+        setUserFollowingList((prev) => ({ ...prev, [userUid]: !prev[userUid] }));
         console.log("Follow successful");
       } else {
         const userDocRef = doc(db, "users", currentUserUid);
-        await updateDoc(userDocRef, { followers: arrayRemove(userUid) });
-        setUserFollowingList((prev) => ({ ...prev, [userUid]: false }));
+        await updateDoc(userDocRef, { followers: arrayRemove(userUid ,  "unfollow") });
+       setUserFollowingList((prev) => ({ ...prev, [userUid]: !prev[userUid] }));
         console.log("Unfollowing Successfully");
       }
     } catch (err) {
@@ -99,7 +99,7 @@ const ShowDataModal = () => {
                   type="button"
                   className="btn btn-primary"
                 >
-                  {getFollowerStatus(user?.uid) ? "Unfollow" : "Follow"}
+                  {getFollowerStatus(user?.uid || user?.UserData) ? "Unfollow" : "Follow"}
                 </button>
               </div>
             </div>

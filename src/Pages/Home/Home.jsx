@@ -14,12 +14,12 @@ import { addDoc, collection, getDocs } from "firebase/firestore";
 import { useAuth } from "../../DataContext";
 
 const Home = () => {
-  const { userID, updateAnotherState } = useAuth();
+  const { userID } = useAuth();
 
   const [text, setText] = useState("");
   const [image, setImage] = useState("");
   const [data, setData] = useState([]);
-  const [messagingSenderId,   setMessagingSenderId] = useState("");
+  const [messagingSenderId, setMessagingSenderId] = useState("");
 
   const handleUploadImage = (e) => {
     console.log(e.target.files[0]);
@@ -43,14 +43,15 @@ const Home = () => {
 
     // USERID FATCHING
     const messagingSenderId =
-      dataDB?._firestore?._app?._options?.messagingSenderId;  
-      setMessagingSenderId(messagingSenderId);
+      dataDB?._firestore?._app?._options?.messagingSenderId;
+    setMessagingSenderId(messagingSenderId);
   };
 
   useEffect(() => {
     handleGetData();
   }, [image]);
 
+  console.log(userID?.fullName, "userID");
   return (
     <>
       <div className="row">
@@ -136,14 +137,15 @@ const Home = () => {
             </div>
           </div>
           <div className="All-post-image-text">
-            {data.map((value) => (
-              <div className="All-post-second">
-                {/* <h5>{messagingSenderId}</h5> */}
-                <h5 className="Post-deceription">{value.txtVal}</h5>
-                <img src={value.imgUrl} alt="Post" />{" "}
-                
-              </div>
-            ))}
+            <div className="Allpost-third">
+              {data.map((value) => (
+                <div className="All-post-second" key={value.postId}>
+                  <h5 className="Post-description">{userID?.fullName}</h5>
+                  <h5 className="Post-description">{value.txtVal}</h5>
+                  {value.imgUrl && <img src={value.imgUrl} alt="Post" />}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
