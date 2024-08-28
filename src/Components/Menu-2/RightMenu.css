@@ -1,110 +1,108 @@
-.main-right-menu{
-    /* width: 19rem !important; */
-    margin-top: 2rem;
-    display: flex;
+.main-right-menu {
+  /* width: 19rem !important; */
+  margin-top: 2rem;
+  display: flex;
 }
-.second-right-menu{
-    margin-right: 5px;
+.second-right-menu {
+  margin-right: 5px;
 }
-.Search-field{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Search-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* SEARCH FIELD CSS */
 .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-left: 0.5px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    background: #EFF3F4;
-    margin-bottom: 1.5rem;
-    margin-left: 3px ;
-    
-  }
-  
-  .search-input {
-    width: 100% !important;
-    flex: 1;
-    padding: 8px;
-    border: none;
-    justify-content: center;
-    border-radius: 20px;
-    outline: none;
-    font-size: 16px;
-   
-  }
-  
-  .search-button {
-    background-color: #1DA1F2;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .search-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* SUBSCRIPTION component css */
-.Subscription-main{
-    width: 96%;
-    border: solid 1px #EFF3F4;
-    border-radius: 14px;
-    background-color: #F7F9F9;
-    margin: auto;
-}
-.Subscription-second{
-    padding: 5px 2px;
-    max-height:28rem !important;;
-}
-.Subscription-main h1{
-    margin-bottom: 1rem;
-    font-size:xx-large;
-    font-family: Helvetica Neue;
-    padding-left: 3px;
-}
-.Subscription-second h4{
-    margin-bottom: 1rem;
-    font-weight: 200;
-    font-size: large;
-    font-family: Helvetica Neue;
-    padding-left: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: 0.5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #eff3f4;
+  margin-bottom: 1.5rem;
+  margin-left: 3px;
 }
 
+.search-input {
+  width: 100% !important;
+  flex: 1;
+  padding: 8px;
+  border: none;
+  justify-content: center;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+}
 
-.Subscriber-btn{
-    width: 45%;
-    height: 3rem;
-    border-radius: 25px !important;
-    font-weight: bolder;
-    font-size: medium;
-    background-color: #272C30;
-    border: solid 1px white;
-    color: white;
-    padding-left: 3px;
+.search-button {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* SUBSCRIPTION component css */
+.Subscription-main {
+  width: 96%;
+  border: solid 1px #eff3f4;
+  border-radius: 14px;
+  background-color: #f7f9f9;
+  margin: auto;
+}
+.Subscription-second {
+  padding: 5px 2px;
+  max-height: 28rem !important;
+}
+.Subscription-main h1 {
+  margin-bottom: 1rem;
+  font-size: xx-large;
+  font-family: Helvetica Neue;
+  padding-left: 3px;
+}
+.Subscription-second h4 {
+  margin-bottom: 1rem;
+  font-weight: 200;
+  font-size: large;
+  font-family: Helvetica Neue;
+  padding-left: 3px;
+}
+
+.Subscriber-btn {
+  width: 45%;
+  height: 3rem;
+  border-radius: 25px !important;
+  font-weight: bolder;
+  font-size: medium;
+  background-color: #272c30;
+  border: solid 1px white;
+  color: white;
+  padding-left: 3px;
 }
 
 /* TRANDING TOPIC CSS */
-.Tranding-topic-main{
-    margin-top: 1rem;
-    padding: 0.5rem 0.5rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 47vh !important;
+.Tranding-topic-main {
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 47vh !important;
+  padding-bottom: 2rem;
 }
 /* Hide  scrollbar */
 .Tranding-topic-main::-webkit-scrollbar {
-    width: 0.5em; 
+  width: 0.5em;
 }
 .Tranding-topic-main::-webkit-scrollbar-thumb {
-    background-color: transparent; 
+  background-color: transparent;
 }

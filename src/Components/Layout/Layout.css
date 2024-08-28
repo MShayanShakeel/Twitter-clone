@@ -10,7 +10,6 @@
 }
 .Slidebar-toggle {
   width: 20% !important;
-  
 }
 .slidebar-toggel-icons {
   display: flex;
@@ -24,16 +23,15 @@
   margin-top: 30px;
 }
 
-
 /* CENTER BAR CSS  */
-.center-bar-main{
+.center-bar-main {
   width: 55%;
   margin-left: 0.46rem;
 }
 
 /* RIGHT BAR CSS */
 .Right-bar-main {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .Right-bar-Second {
@@ -45,5 +43,11 @@
   height: 100vh; /* Adjust the height as needed */
   background-color: #fff; /* Add your desired background color */
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* customize shadoooowwww */
-  z-index: 1000; /* Adjust the z-index to make sure it's above other content */
+  z-index: 1000;
+}
+
+@media screen and (max-width: 751px) {
+  .Right-bar-Second {
+    display: none;
+  }
 }
